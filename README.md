@@ -1,8 +1,9 @@
-# my-gulp - 基于gulp的工具架构，方便多页面的编译
+# 博客[koa2_site](https://github.com/damaohub/koa2-site)的前端项目，基于gulp
 ![version](https://img.shields.io/badge/version-%20v1.1.0%20-green.svg)
-![npm version](https://img.shields.io/badge/npm-%20v1.2.0%20-blue.svg)
-# gulp
+![npm version](https://img.shields.io/badge/npm-%20v5.6.0%20-blue.svg)
 
+
+## gulp
 使用 `gulp` 进行代码编译，如何进行编译请参见下面的gulp章节。
 
 所有编译后的代码都在 `dist` 目录下，为了减少垃圾文件，master默认忽略了这个目录。
