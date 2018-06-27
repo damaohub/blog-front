@@ -30,9 +30,9 @@ gulp.task('js', function (cb) {
     gulp.src([
         'assets/js/vendor/jquery.min.js',
         'assets/js/vendor/bootstrap.min.js',
-        'assets/js/vendor/masonry.min.js',
-        'assets/js/vendor/simplemde.min.js',
-        'assets/js/vendor/analytics.js',
+        // 'assets/js/vendor/masonry.min.js',
+        // 'assets/js/vendor/simplemde.min.js',
+        // 'assets/js/vendor/analytics.js',
     ])
         .pipe(concat({ path: 'script.js' }))
         .pipe(header(banner))
