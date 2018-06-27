@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{title}}</title>
+    <% include partion/_head.html %>
+</head>
+<body>
+    <div id="wrap">
+    <% include partion/nav.html %>
+<div class="container main-container ">
+
+
+    <div class="col-md-9 topics-index main-col">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+            
+                <ul class="list-inline topic-filter">
+            
+                    <li class="popover-with-html" data-content="发布时间排序" data-original-title="" title="">
+                        <a href="" class="active">最近</a>
+                    </li>
+                </ul>
+            
+                <div class="clearfix"></div>
+            </div>
+    
+            <div class="jscroll">
+                <div class="jscroll-inner">
+                    <div class="panel-body remove-padding-horizontal">
+                        <ul class="list-group row topic-list">
+                            <li class="list-group-item ">
+                                <a class="reply_count_area hidden-xs pull-right" href="">
+                                    <div class="count_set">
+                                        <span class="count_of_votes" title="投票数">
+                                                19
+                                            </span>
+            
+                                        <span class="count_seperator">/</span>
+            
+                                        <span class="count_of_replies" title="回复数">
+                                                10
+                                            </span>
+                            
+                                            <span class="count_seperator">/</span>
+                            
+                                            <span class="count_of_visits" title="查看数">
+                                                189
+                                            </span>
+                                            <span class="count_seperator">|</span>
+            
+                                        <abbr title="{{post.updatedAt|date}}" class="timeago">{{post.updatedAt|date('{y}-{m}-{d}')}}</abbr>
+                                    </div>
+                                </a>
+                                <!-- <div class="avatar pull-left">
+                                    <a href="https://laravel-china.org/users/1" title="Summer">
+                                        <img class="media-object img-thumbnail avatar avatar-middle" alt="Summer" src="https://lccdn.phphub.org/uploads/avatars/1_1479342408.png?imageView2/1/w/100/h/100">
+                                    </a>
+                                </div> -->
+            
+            
+                                <div class="infos">
+            
+                                    <div class="media-heading">
+            
+                                        <!-- <span class="hidden-xs label label-warning">置顶</span> -->
+            
+                                        <a href=""
+                                            title="">
+                                            
+                                        </a>
+            
+            
+                                    </div>
+            
+                                </div>
+            
+                            </li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+ 
+    
+    </div>
+
+    <div class="col-md-3 side-bar">
+        <% include partion/side.html %>
+    </div>
+    <div class="clearfix"></div>
+
+
+
+
+</div>
+    </div>
+    <% include partion/_script.html %>
+</body>
+</html>

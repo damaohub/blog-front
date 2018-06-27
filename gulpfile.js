@@ -5,7 +5,7 @@ var connect = require("gulp-connect");
 //var less = require("gulp-less");
 var sass = require("gulp-sass");
 var autoprefixer = require('gulp-autoprefixer');
-//var ejs = require("gulp-ejs");
+var ejs = require("gulp-ejs");
 var uglify = require('gulp-uglify');
 var ext_replace = require('gulp-ext-replace');
 var cssmin = require('gulp-cssmin');
@@ -28,27 +28,16 @@ gulp.task('js', function (cb) {
     };
 
     gulp.src([
-        './assets/js/plugin.js'
-    ])
-        .pipe(concat({ path: 'plugin.js' }))
-        .pipe(gulp.dest('./public/javascripts/'))
-        .on("end", end);
-
-
-    gulp.src([
         'assets/js/vendor/jquery.min.js',
         'assets/js/vendor/bootstrap.min.js',
         'assets/js/vendor/masonry.min.js',
         'assets/js/vendor/simplemde.min.js',
         'assets/js/vendor/analytics.js',
-
     ])
         .pipe(concat({ path: 'script.js' }))
         .pipe(header(banner))
         .pipe(gulp.dest('./public/javascripts/'))
         .on("end", end);
-
-
 });
 
 gulp.task('uglify', ["js"], function () {
@@ -78,6 +67,11 @@ gulp.task('cssmin', ["sass"], function () {
         .pipe(gulp.dest('./public/stylesheets/'));
 });
 
+gulp.task('ejs',function () {
+    return gulp.src('pages/*.html')
+        .pipe(ejs({}))
+        .pipe(gulp.dest('views/'))
+})
 
 gulp.task('copy', function () {
     gulp.src(['node_modules/bootstrap-sass/assets/fonts/bootstrap/*.*'])
