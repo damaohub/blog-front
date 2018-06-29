@@ -97,4 +97,4 @@ gulp.task('server', function () {
     connect.server();
 });
 gulp.task("default", ['watch']);
-gulp.task("build", ['uglify', 'cssmin', 'copy']);
+gulp.task("build", ['uglify', 'cssmin', 'copy','ejs']);
