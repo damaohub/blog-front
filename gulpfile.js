@@ -88,11 +88,9 @@ gulp.task('copy', function () {
 });
 
 gulp.task('watch', function () {
-    gulp.watch('assets/js/**/*.js', ['js']);
-    // gulp.watch('src/less/**/*.less', ['less']);
-    gulp.watch('assets/sass/**/*.sass', ['sass']);
-    // gulp.watch('pages/*.html', ['ejs']);
-    gulp.watch('pages/css/*.css', ['copy']);
+    gulp.watch('assets/js/main.js', ['js']);
+    gulp.watch('assets/sass/*.scss', ['sass']);
+    gulp.watch('pages/*.html', ['ejs']);
 });
 
 gulp.task('server', function () {
